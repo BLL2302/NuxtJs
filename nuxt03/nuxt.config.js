@@ -13,9 +13,22 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        type: 'module',
+        src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'
+        // eslint-disable-next-line no-dupe-keys
+      },
+      {
+        type: 'module',
+        src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'
+      },
+      {
+        src: 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'
+      }
     ]
   },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],

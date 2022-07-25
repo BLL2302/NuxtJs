@@ -1,22 +1,14 @@
 <template>
   <div class="maincenterclass">
     <div class="mainappclass">
-      <div style="text-align: center">
+      <div>
         <p id="introid" class="introclass">
           By using our service you are accepting our
-          <span><a
-            href="/"
-            style="text-decoration: none;
-                    color: #f90909;"
-          >terms of use</a></span>.
+          <span><a href="/" style="text-decoration:none;color:red">terms of use</a></span>.
         </p>
         <p id="introid">
           At Ontiva, our
-          <span class="fontweighclass">YouTube to WAV</span> Converter is an excellent tool for the conversion of various <span class="fontweighclass">YouTube videos</span> to the Waveform Audio file format or WAV. You can do so effortlessly on our <span><a
-            href="/"
-            style="text-decoration: none;
-                    color: #f90909;"
-          >MP3Juice</a></span> with a few simple steps.
+          <span class="spanfontweigh">YouTube to WAV</span> Converter is an excellent tool for the conversion of various <span class="spanfontweigh">YouTube videos</span> to the Waveform Audio file format or WAV. You can do so effortlessly on our <span><a href="/">MP3Juice</a></span> with a few simple steps.
         </p>
       </div>
       <div id="content01" class="content">
@@ -26,42 +18,44 @@
       <div id="content02" class="content">
         <h1>How do I use the Ontiva YouTube to WAV Converter Free?</h1>
         <div class="alert alert-light d-flex align-items-center" role="alert">
-          <ion-icon name="heart" size="large" />
+          <ion-icon name="heart" size="large" class="iconclass" />
           <div>
             Copy the YouTube video URL and paste it to the box. You can do so by directly copying and pasting the link on the YouTube page or look for it through the “Search” box.
           </div>
         </div>
         <div class="alert alert-light d-flex align-items-center" role="alert">
-          <ion-icon name="car-sport-outline" size="large" />
+          <ion-icon name="car-sport-outline" size="large" class="iconclass" />
           <div>
             Set the file format output which, in this case, is WAV.
           </div>
         </div>
         <div class="alert alert-light d-flex align-items-center" role="alert">
-          <ion-icon name="bicycle-outline" size="large" />
+          <ion-icon name="bicycle-outline" size="large" class="iconclass" />
           <div>
             Click the Convert button
           </div>
         </div>
         <div class="alert alert-light d-flex align-items-center" role="alert">
-          <ion-icon name="caret-forward-outline" size="large" />
+          <ion-icon name="caret-forward-outline" size="large" class="iconclass" />
           <div>
             It takes a few quick moments before the file to be ready and then clicks Download.
           </div>
         </div>
         <div class="alert alert-light d-flex align-items-center" role="alert">
-          <ion-icon name="earth-outline" size="large" />
+          <ion-icon name="earth-outline" size="large" class="iconclass" />
           <div>
             Set the destination folder.
           </div>
         </div>
         <div class="alert alert-light d-flex align-items-center" role="alert">
-          <ion-icon name="earth-outline" size="large" />
+          <ion-icon name="earth-outline" size="large" class="iconclass" />
           <div>
             You can now enjoy your downloaded YouTube video in the WAV format.
           </div>
         </div>
-        <p>A YouTube to WAV online free converter is a software that you can find on the web that allows you to convert YouTube videos to the WAV format. That means no software download is required, which saves you so much time. Ontiva is one such platform. It can convert YouTube videos to any format, including YouTube to WAV and others. Simply access Ontiva and convert YouTube to WAV online free in just seconds!</p>
+        <p style="margin-top:2rem">
+          A YouTube to WAV online free converter is a software that you can find on the web that allows you to convert YouTube videos to the WAV format. That means no software download is required, which saves you so much time. Ontiva is one such platform. It can convert YouTube videos to any format, including YouTube to WAV and others. Simply access Ontiva and convert YouTube to WAV online free in just seconds!
+        </p>
         <p>Because YouTube is a giant among all the video-sharing platforms, it is usually the preferred website to upload and share videos with. And now, even more so, many are using YouTube to influence, increase likes, and make money.</p>
         <p>Aside from videos, YouTube is also a platform where people share music in video format. Now and then, you stumble upon these types of content and wonder: “Is there a way to get this song off YouTube and save it on my device?” The answer to that, of course, is a resounding YES, thanks to our YouTube to <span class="spanindam">WAV converter</span>.</p>
       </div>
@@ -86,12 +80,48 @@
     </div>
   </div>
 </template>
+
 <style scoped>
-  .fontweighclass{
-    font-weight: 800;
-  }
-  h1{
-    font-size: 3.5rem;
-    font-weight: 700;
-  }
+
+.maincenterclass{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+.mainappclass{
+    display: flex;
+    max-width: 1150px !important ;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.introclass{
+    padding-top: 10px;
+    text-align: center;
+}
+.spanfontweigh{
+  font-weight: 650;
+}
+.alert-light{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px;
+}
+.iconclass{
+  color: rgb(154, 20, 76);
+  height: 40px;
+  width: 40px;
+  margin-right: 24px;
+}
+.content h1{
+    padding : 40px;
+    font-size: 3rem;
+    padding-left: 0;
+    font-weight: 600;
+
+}
+
+.align-items-center{
+    font-size: 1.5rem;
+    font-weight: 40px;
+}
 </style>

@@ -1,3 +1,37 @@
 <template>
-  <h1>your about page follow id {{ $route.params.id }} is acctived.</h1>
+  <div>
+    <header class="btclodheaderclass">
+      <OntivaNavHeadVue />
+      <OntivaSearchVue />
+    </header>
+    <OntivaConvert2 />
+    <OntivaFootVue />
+  </div>
 </template>
+
+<script>
+import OntivaNavHeadVue from '~/components/OntivaNavHead.vue'
+import OntivaSearchVue from '~/components/OntivaSearch.vue'
+import OntivaConvert2 from '~/components/OntivaConvert2.vue'
+import OntivaFootVue from '~/components/OntivaFoot.vue'
+export default {
+  name: 'Head',
+  components: {
+    OntivaNavHeadVue,
+    OntivaSearchVue,
+    OntivaConvert2,
+    OntivaFootVue
+  }
+}
+</script>
+
+<style>
+    .btclodheaderclass{
+        width: 100%;
+        background-image: url(~/assets/images/header.jpg);
+        height: 364px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+</style>

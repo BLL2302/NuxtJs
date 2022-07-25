@@ -2,7 +2,9 @@
   <header>
     <nav>
       <div class="navimg">
-        <img src="~/assets/images/logo.png">
+        <NuxtLink to="/">
+          <img src="~/assets/images/logo.png">
+        </NuxtLink>
       </div>
       <div class="leftside">
         <div class="">
@@ -11,7 +13,7 @@
           </NuxtLink>
         </div>
         <div class="">
-          <NuxtLink to="/about" class="homeclass">
+          <NuxtLink to="/about/1" class="homeclass">
             About
           </NuxtLink>
         </div>

@@ -2,7 +2,9 @@
   <header>
     <nav>
       <div class="navimg">
-        <img src="~/assets/images/logo.png" alt="">
+        <NuxtLink to="/about/1">
+          <img src="~/assets/images/logo.png" alt="">
+        </NuxtLink>
       </div>
       <div class="rightside">
         <div>
@@ -35,8 +37,12 @@
     <div class="col below--navbar position-relative">
       <div class="searchbox position-absolute top-100 start-50">
         <input type="text" placeholder="Search or paste link here" class="searchbar">
-        <button class="search-btn">
-          START NOW -->
+        <button class="search-btn d-flex justify-content-center">
+          START NOW <ion-icon
+            name="arrow-forward-outline"
+            style="height: 22px;
+          width: 30px;"
+          />
         </button>
       </div>
     </div>
@@ -65,13 +71,16 @@
       border: 1px solid white;
       border-radius: 26px;
     }
+    .rightclass:hover{
+      opacity: 0.8;
+    }
     .loginclass{
       color: white;
     }
     .signupclass{
       color: black;
-      background: #fdcd55;
-      border: 1px solid #fdcd55;
+      background: #fdcf55;
+      border: 1px solid #fdcf55;
     }
     .dropdown-toggle{
       background: none;

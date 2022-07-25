@@ -23,7 +23,7 @@
   </footer>
 </template>
 
-<style>
+<style scoped>
     .footerclass{
     width: 100%;
     height: 250px;
