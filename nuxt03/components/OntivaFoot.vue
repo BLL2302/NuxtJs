@@ -44,7 +44,7 @@ ul {
 li{
     display: block;
     padding-left: 20px;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     padding-right: 15px;
 }
 li:last-child{

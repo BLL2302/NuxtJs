@@ -5,7 +5,6 @@
       <OntivaSearchVue />
     </header>
     <OntivaConvert2 />
-    <OntivaFootVue />
   </div>
 </template>
 
@@ -13,15 +12,14 @@
 import OntivaNavHeadVue from '~/components/OntivaNavHead.vue'
 import OntivaSearchVue from '~/components/OntivaSearch.vue'
 import OntivaConvert2 from '~/components/OntivaConvert2.vue'
-import OntivaFootVue from '~/components/OntivaFoot.vue'
 export default {
   name: 'Head',
   components: {
     OntivaNavHeadVue,
     OntivaSearchVue,
-    OntivaConvert2,
-    OntivaFootVue
-  }
+    OntivaConvert2
+  },
+  layout: 'ontivaView'
 }
 </script>
 
