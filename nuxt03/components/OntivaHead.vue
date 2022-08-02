@@ -35,20 +35,19 @@
       Youtube To WAV
     </div>
     <div class="col below--navbar position-relative">
-      <div class="searchbox position-absolute top-100 start-50">
-        <input type="text" placeholder="Search or paste link here" class="searchbar">
-        <button class="search-btn d-flex justify-content-center">
-          START NOW <ion-icon
-            name="arrow-forward-outline"
-            style="height: 22px;
-          width: 30px;"
-          />
-        </button>
-      </div>
+      <SearchVue class="searchbox position-absolute top-100 start-50" />
     </div>
   </header>
 </template>
-<style scoped>
+<script>
+import SearchVue from './toWavpage/Search.vue'
+export default {
+  components: {
+    SearchVue
+  }
+}
+</script>
+<style >
     header{
         width: 100%;
         background-image: url(~/assets/images/header.jpg);

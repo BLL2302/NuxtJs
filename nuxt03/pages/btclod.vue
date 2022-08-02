@@ -10,6 +10,11 @@ export default {
   components: {
     BtclodMainVue
   },
-  layout: 'btclodView'
+  layout: 'btclodView',
+  asyncData () {
+    return {
+      rendering: process.server ? 'server' : 'client'
+    }
+  }
 }
 </script>
