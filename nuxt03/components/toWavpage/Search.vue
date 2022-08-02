@@ -25,9 +25,27 @@ export default {
   },
   methods: {
     async getData () {
-      const { suggestSearch } = await jsonp.get('http://suggestqueries.google.com/complete/search?callback=?')
+      const { suggestSearch } = await jsonp('http://suggestqueries.google.com/complete/search?callback=?')
       this.suggestSearch = suggestSearch
     }
   }
 }
 </script>
+
+<style scoped>
+    .searchbar{
+        flex: 1 1 auto;
+        outline: none;
+        border: none;
+    }
+    .search-btn{
+    position: absolute;
+    right: 2%;
+    border-radius: 28px;
+    padding: 8px 16px;
+    border: none;
+    background:#ce4a4a;
+    color: white;
+    text-align: left;
+    }
+</style>

@@ -47,7 +47,7 @@ export default {
   }
 }
 </script>
-<style >
+<style scoped>
     header{
         width: 100%;
         background-image: url(~/assets/images/header.jpg);
