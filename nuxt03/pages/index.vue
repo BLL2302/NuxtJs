@@ -18,6 +18,12 @@ export default {
     return {
       rendering: process.server ? 'server' : 'client'
     }
+  },
+  mounted () {
+    const user = localStorage.getItem('user-info')
+    if (!user) {
+      this.$router.push({ name: 'signup' })
+    }
   }
 }
 </script>

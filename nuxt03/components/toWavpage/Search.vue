@@ -16,8 +16,8 @@
       />
     </button>
     <div class="position-absolute top-100 scrollclass" style="width:90%">
-      <div class="suggestSearch">
-        {{ $store.state.searchCache }}
+      <div v-for="searchkey in filteredItems" :key="searchkey" class="suggestSearch">
+        {{ searchkey }}
       </div>
       <div v-for="sSearch in suggestSearch" :key="sSearch" class="suggestSearch">
         {{ sSearch[0] }}
@@ -35,11 +35,13 @@ export default {
       suggestSearch: []
     }
   },
-  // computed: {
-  //   get () {
-  //     return this.$store.state.searchCache
-  //   }
-  // },
+  computed: {
+    filteredItems () {
+      return this.$store.state.searchCache.filter((searchkey) => {
+        return searchkey.toLowerCase().includes(this.keyword.toLowerCase())
+      })
+    }
+  },
   methods: {
     async getData () {
       try {
@@ -58,11 +60,12 @@ export default {
         // eslint-disable-next-line no-console
         console.log(err)
       }
+    },
+    addCache () {
+      this.$store.dispatch('addCache', this.keyword)
     }
-  },
-  addCache () {
-    this.$store.dispatch('addCache', this.keyword)
   }
+
 }
 </script>
 

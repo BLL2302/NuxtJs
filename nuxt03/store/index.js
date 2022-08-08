@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 export const state = () => ({
-  searchCache: [],
-  counter: 0
+  searchCache: []
 })
 
 export const getters = {
@@ -15,17 +14,8 @@ export const getters = {
 }
 
 export const mutations = {
-  increment (state) {
-    state.counter++
-  },
   addCache (state, newkeyword) {
-    state.searchCache = state.searchCache.push(newkeyword)
-  },
-  decreaseCounter (state) {
-    state.counter--
-  },
-  increaseCounter (state, randomNumber) {
-    state.counter += randomNumber
+    state.searchCache.push(newkeyword)
   }
 }
 
