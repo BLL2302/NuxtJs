@@ -34,6 +34,7 @@
 
 <script>
 export default {
+  layout: 'auth',
   data () {
     return {
       email: '',
@@ -49,7 +50,11 @@ export default {
           password: this.password,
           isLogin: this.isLogin
         }
-      ).then(() => this.$router.push('/'))
+      ).then((result) => {
+        // eslint-disable-next-line no-console
+        console.log(result)
+        if (result.success) { this.$router.push('/') }
+      })
     }
   }
 }
