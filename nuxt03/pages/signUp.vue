@@ -34,7 +34,7 @@ export default {
   mounted () {
     const user = localStorage.getItem('user-info')
     if (user) {
-      this.$router.push({ name: 'index' })
+      this.$router.push('/')
     }
   },
   methods: {
@@ -49,10 +49,9 @@ export default {
       // eslint-disable-next-line no-console
       console.warn(result)
       if (result.status === 201) {
-        alert('Sign Up is done')
+        localStorage.setItem('user-info', JSON.stringify(result.data))
+        this.$router.push('/')
       }
-      localStorage.setItem('user-info', JSON.stringify(result.data))
-      this.$router.push({ name: 'index' })
     }
   }
 }

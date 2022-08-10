@@ -11,7 +11,7 @@
           <NuxtLink to="/btclod" class="loginclass rightclass px-3 py-2  mx-1 ">
             Log In
           </NuxtLink>
-          <NuxtLink to="/signUp" class="signupclass rightclass px-3 py-2 mx-1">
+          <NuxtLink to="/register" class="signupclass rightclass px-3 py-2 mx-1">
             Register
           </NuxtLink>
         </div>

@@ -76,5 +76,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  env: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseApiURL: process.env.BASE_API_URL || 'https://acc-ontiva-default-rtdb.firebaseio.com',
+    fbApiKey: 'AIzaSyBP8AjsVw9MnuAFXggw_mBHvoSlZa8No-A'
   }
 }

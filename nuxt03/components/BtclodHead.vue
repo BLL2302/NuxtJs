@@ -25,10 +25,10 @@
       </div>
       <div class="rightside">
         <div>
-          <NuxtLink to="/" class="loginclass rightclass px-3 py-2  mx-1 ">
+          <NuxtLink to="/login" class="loginclass rightclass px-3 py-2  mx-1 ">
             LOGIN
           </NuxtLink>
-          <NuxtLink to="/" class="signupclass rightclass px-3 py-2 mx-1">
+          <NuxtLink to="/register" class="signupclass rightclass px-3 py-2 mx-1">
             SIGN UP
           </NuxtLink>
         </div>

@@ -32,7 +32,8 @@ export default {
   data () {
     return {
       keyword: '',
-      suggestSearch: []
+      suggestSearch: [],
+      isOpen: false
     }
   },
   computed: {
