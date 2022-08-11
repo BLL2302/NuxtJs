@@ -24,7 +24,22 @@
         </div>
       </div>
       <div class="rightside">
-        <div>
+        <div ref="auth">
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle mx-1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="~/assets/images/lang/fr.png" alt="" class="auth_img">
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Setting</a></li>
+              <li><a class="dropdown-item" href="#">Payment</a></li>
+              <button @click="$store.dispatch('logout')">
+                Log out
+              </button>
+            </ul>
+          </div>
+        </div>
+        <div ref="none_auth">
           <NuxtLink to="/login" class="loginclass rightclass px-3 py-2  mx-1 ">
             LOGIN
           </NuxtLink>
@@ -67,6 +82,19 @@
     </div>
   </header>
 </template>
+<script>
+export default {
+  mounted () {
+    if (this.$store.state.token !== null) {
+      this.$refs.auth.style.display = 'block'
+      this.$refs.none_auth.style.display = 'none'
+    } else {
+      this.$refs.auth.style.display = 'none'
+      this.$refs.none_auth.style.display = 'block'
+    }
+  }
+}
+</script>
 
 <style scoped>
     header{
@@ -166,5 +194,8 @@
     border: none;
     background:#872166;
     color: white;
+    }
+    .auth_img{
+      border-radius: 50%;
     }
 </style>
