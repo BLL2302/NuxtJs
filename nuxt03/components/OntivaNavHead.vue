@@ -21,7 +21,7 @@
           </ul>
         </div>
       </div>
-      <div ref="none_auth">
+      <div ref="none_auth" class="none_auth">
         <NuxtLink to="/login" class="loginclass rightclass px-3 py-2  mx-1 ">
           Log In
         </NuxtLink>

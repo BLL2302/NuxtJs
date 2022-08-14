@@ -80,7 +80,6 @@ export default {
     display: flex;
     justify-content: center;
     padding-top: 100px;
-    background-image: url(~/assets/images/header.jpg);
     background-repeat: round;
   }
   .card-form{

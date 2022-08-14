@@ -1,72 +1,35 @@
 <template>
-  <div class="autocomplete">
-    <input
-      v-model="search"
-      type="text"
-      @input="onChange"
-    >
-    <ul
-      class="autocomplete-results"
-    >
-      <li
-        class="autocomplete-result"
-      >
-        (result)
-      </li>
-    </ul>
+  <div id="app">
+    <input v-model="search" type="text">
+    <div v-for="item in filteredItems" :key="item.name">
+      <p>{{ item.name }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SearchAutocomplete',
+  el: '#app',
+
   data () {
     return {
       search: '',
       items: [
-        'Apple',
-        'Banana',
-        'Orange',
-        'Mango',
-        'Pear',
-        'Peach',
-        'Grape',
-        'Tangerine',
-        'Pineapple'
+        { name: 'Stackoverflow', type: 'development' },
+        { name: 'Game of Thrones', type: 'serie' },
+        { name: 'Jon Snow', type: 'actor' }
       ]
     }
   },
-  methods: {
-    onChange () {
 
+  computed: {
+    filteredItems () {
+      return this.items.filter((item) => {
+        return item.name.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   }
+
 }
+
 </script>
-<style scoped>
-  .autocomplete {
-    position: relative;
-  }
-
-  .autocomplete-results {
-    padding: 0;
-    margin: 0;
-    border: 1px solid #eeeeee;
-    height: 120px;
-    min-height: 1em;
-    max-height: 6em;
-    overflow: auto;
-  }
-
-  .autocomplete-result {
-    list-style: none;
-    text-align: left;
-    padding: 4px 2px;
-    cursor: pointer;
-  }
-
-  .autocomplete-result:hover {
-    background-color: #4AAE9B;
-    color: white;
-  }
-</style>

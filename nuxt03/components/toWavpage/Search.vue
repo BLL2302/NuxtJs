@@ -1,6 +1,7 @@
 <template>
   <div>
     <input
+      ref="inputKey"
       v-model="keyword"
       type="text"
       placeholder="Search or paste link here"
@@ -16,7 +17,7 @@
       />
     </button>
     <div class="position-absolute top-100 scrollclass" style="width:90%">
-      <div v-for="searchkey in filteredItems" :key="searchkey" class="suggestSearch">
+      <div v-for="searchkey in filteredItems" :key="searchkey" ref="keyCache" class="suggestSearch key_cache">
         {{ searchkey }}
       </div>
       <div v-for="sSearch in suggestSearch" :key="sSearch" class="suggestSearch">
@@ -43,6 +44,12 @@ export default {
       })
     }
   },
+  // mounted(){
+  //     onChange () {
+  //     this.filteredItems()
+  //     this.isOpen = true
+  //   }
+  // },
   methods: {
     async getData () {
       try {
@@ -66,7 +73,6 @@ export default {
       this.$store.dispatch('addCache', this.keyword)
     }
   }
-
 }
 </script>
 
@@ -94,6 +100,9 @@ export default {
         border-bottom:  1px solid white;
         color: white;
     }
+    /* .key_cache{
+      display: none;
+    } */
     .scrollclass{
         overflow: auto;
         height: 250px;
